@@ -5,34 +5,38 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 public class Bag<Item> implements Iterable<Item> {
-    public Bag() {
-    }
-
-    ;
-
-    void add(Item item) {
-    }
-
-    boolean isEmpty() {
-        return true;
-    }
-
-    int size() {
-        return 0;
-    }
+    private Node first;
 
     @Override
     public Iterator<Item> iterator() {
         return null;
     }
 
-    @Override
-    public void forEach(Consumer<? super Item> action) {
-
+    private class Node {
+        Item item;
+        Node next;
     }
 
-    @Override
-    public Spliterator<Item> spliterator() {
-        return null;
+    void add(Item item) {
+        Node oldFirst = first;
+        first = new Node();
+        first.item = item;
+        first.next = oldFirst;
+    }
+
+    private class ListIterator implements Iterator<Item> {
+        Node current = first;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
     }
 }
