@@ -15,26 +15,31 @@ public class FixedCapacityStackOfStrings {
         return N == 0;
     }
 
-    public int size(){
+    public int size() {
         return N;
     }
 
-    public void push(String item){
+    public void push(String item) {
         a[N++] = item;
     }
-    public String pop(){
+
+    public String pop() {
         return a[N--];
+    }
+
+    public boolean isFull() {
+        return N == a.length - 1;
     }
 
     public static void main(String[] args) {
         FixedCapacityStackOfStrings s;
         s = new FixedCapacityStackOfStrings(100);
-        while (!StdIn.isEmpty()){
+        while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
-            if(!item.equals("-"))
+            if (!item.equals("-"))
                 s.push(item);
             else if (!s.isEmpty()) StdOut.print(s.pop() + " ");
         }
-        StdOut.print("("+ s.size()+" left on stack");
+        StdOut.print("(" + s.size() + " left on stack");
     }
 }

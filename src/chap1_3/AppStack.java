@@ -3,7 +3,7 @@ package chap1_3;
 public class AppStack {
     public static void main(String[] args) {
         Stack<String> stringStack = new Stack<>();
-        String stringInput = "to be or not to - be - - that - - - is";
+        String stringInput = "it was - the best - of times - - - it was - the - -";
         String[] inputs = stringInput.split(" ");
         for (String s : inputs) {
             if (!s.equals("-")) {
