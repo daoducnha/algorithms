@@ -1,4 +1,4 @@
-//package chap1_3;
+//package chap1.chap1_3;
 //
 //import lib.StdIn;
 //import lib.StdOut;

@@ -1,7 +1,4 @@
-package chap1_3;
-
-import lib.StdIn;
-import lib.StdOut;
+package chap1.chap1_3;
 
 import java.util.Stack;
 

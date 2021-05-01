@@ -1,8 +1,6 @@
-package chap1_3;
+package chap1.chap1_3;
 
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class Bag<Item> implements Iterable<Item> {
     private Node first;

@@ -1,4 +1,4 @@
-package chap1_3;
+package chap1.chap1_3;
 
 public class AppStack {
     public static void main(String[] args) {
