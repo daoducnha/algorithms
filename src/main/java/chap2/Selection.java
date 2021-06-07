@@ -1,5 +1,7 @@
 package chap2;
 
+import java.util.Random;
+
 public class Selection extends Example {
     public static void sort(Comparable[] a) {
         int N = a.length;
@@ -13,6 +15,7 @@ public class Selection extends Example {
             exch(a, i, min);
         }
     }
+
 
     public static void main(String[] args) {
         String[] a = {"S", "O", "T", "E","X", "A", "M", "P", "L", "E"};
