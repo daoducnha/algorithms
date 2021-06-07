@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Ex1_3_4 {
-    private static Map<String, String> openCloseMap = new HashMap<>();
+    private static Map<String, String> openCloseMap = new HashMap();
 
     static {
         openCloseMap.put("}", "{");
@@ -24,7 +24,7 @@ public class Ex1_3_4 {
 
         String[] parentheses = expression.split("");
 
-        java.util.Stack<String> stack = new java.util.Stack<>();
+        java.util.Stack<String> stack = new java.util.Stack();
 
         for (String s : parentheses) {
             if (s.equals("[") || s.equals("(") || s.equals("{")) {

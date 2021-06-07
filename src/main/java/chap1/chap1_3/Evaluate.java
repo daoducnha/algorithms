@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class Evaluate {
     public static void main(String[] args) {
-        Stack<Character> ops = new Stack<>();
-        Stack<Double> vals = new Stack<>();
+        Stack<Character> ops = new Stack();
+        Stack<Double> vals = new Stack();
 
         String expression = "(1+((2+3)*(4*5)))";
 
